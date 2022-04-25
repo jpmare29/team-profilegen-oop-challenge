@@ -1,0 +1,29 @@
+{
+  "name": "team-profilegen-oop-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpmare29/team-profilegen-oop-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpmare29/team-profilegen-oop-challenge/issues"
+  },
+  "homepage": "https://github.com/jpmare29/team-profilegen-oop-challenge#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  },
+  "devDependencies": {
+    "jest": "^28.0.0"
+  }
+}
