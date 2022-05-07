@@ -202,8 +202,4 @@ const userFunction = managerData => {
     })
 }
 
-managerPrompt()
-    .then(userFunction)
-    .then(stuff => {
-        console.log(stuff);
-    })
+module.exports = { managerPrompt, userFunction }
