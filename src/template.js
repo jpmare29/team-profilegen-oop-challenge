@@ -1,7 +1,8 @@
+//require relevant classes for use in necessary functions
 const Engineer = require("../lib/Engineer")
 const Intern = require("../lib/Intern")
 const Manager = require("../lib/Manager")
-
+//parses returned inquirer prompt and returns an array of class created objects
 function objectGen(obj) {
     const newArray = [];
     const manager = new Manager(obj.name, obj.id, obj.email, obj.office)
@@ -17,7 +18,8 @@ function objectGen(obj) {
     })
     return newArray;
 }
-function templateGen(array) {
+//function to generate boilerplate HTML and team card container
+function templateGen(teamCards) {
     return`
     <!DOCTYPE html>
     <html lang="en">
@@ -30,13 +32,13 @@ function templateGen(array) {
     </head>
         <body>
             <div class="d-flex container">
-                ${array}
+                ${teamCards}
             </div>
         </body>
     </html>
     `
 }
-
+//function used when parsing class object array to make the respective cards for each team member
 function generateUserCards(obj) {
     if (obj.getRole() === 'Manager') {
     return `
@@ -91,5 +93,5 @@ function generateUserCards(obj) {
     </div>
     `}
 } 
-
+//exports above functions
 module.exports = { objectGen, templateGen, generateUserCards };

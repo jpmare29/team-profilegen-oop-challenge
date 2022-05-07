@@ -1,5 +1,6 @@
+//requires inquirer for use in command line app
 const inquirer = require('inquirer');
-
+//function for first prompt to get manager info
 const managerPrompt = () => {
     return inquirer.prompt([
     {
@@ -55,13 +56,19 @@ const managerPrompt = () => {
         }
     }
 ])};
-
-
-
+//function called after first prompt will receive the returned object and if it is the
+//first time the function is called will create a new attribute on that object
+//set to have the value of an empty array which will be used to push additional team members
 const userFunction = managerData => {
     if (!managerData.teamArray) {
         managerData.teamArray = [];
     }
+    //prompts user if they would like to add any team members
+    //if they do the respective choices for either type will be supplied
+    //that object will be pushed to the teamArray and the function
+    //will be called again until the user selects no or no options
+    //at that point the gathered info will be returned to a series of
+    //handler functions
     return inquirer
     .prompt([
         {
@@ -200,5 +207,5 @@ const userFunction = managerData => {
         return managerData;
     })
 }
-
+//exports above functions
 module.exports = { managerPrompt, userFunction }
