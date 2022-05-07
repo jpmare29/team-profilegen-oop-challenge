@@ -73,7 +73,6 @@ const userFunction = managerData => {
     ])
     .then(addChoice => {
         const { addMember } = addChoice;
-        console.log(addChoice);
         if (addMember[0] === 'Engineer') {
             return inquirer
             .prompt([

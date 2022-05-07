@@ -17,7 +17,7 @@ function objectGen(obj) {
     })
     return newArray;
 }
-function templateGen(arrayGen) {
+function templateGen(array) {
     return`
     <!DOCTYPE html>
     <html lang="en">
@@ -29,8 +29,8 @@ function templateGen(arrayGen) {
         <title>Document</title>
     </head>
         <body>
-            <div class="container">
-                ${arrayGen}
+            <div class="d-flex container">
+                ${array}
             </div>
         </body>
     </html>
